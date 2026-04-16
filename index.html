@@ -3,139 +3,348 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Homepage</title>
+  <meta name="description" content="Academic homepage of Mostafa Haghir Chehreghani, Assistant Professor at Amirkabir University of Technology">
+  <title>Mostafa Haghir Chehreghani | Assistant Professor</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
     }
-    .card {
-      background: white;
-      border-radius: 2rem;
-      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2);
-      max-width: 700px;
-      width: 100%;
-      padding: 2.5rem;
-      text-align: center;
-      transition: transform 0.2s ease;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
     }
-    .card:hover {
-      transform: scale(1.01);
-    }
-    .avatar {
-      width: 120px;
-      height: 120px;
-      background: #2c3e66;
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
       color: white;
-      font-weight: bold;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
     }
-    h1 {
+
+    .header h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
-      color: #1e2a3a;
+      font-weight: 600;
     }
-    .tagline {
+
+    .header .title {
       font-size: 1.2rem;
-      color: #4b5563;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #e2e8f0;
-      display: inline-block;
-      padding-bottom: 0.3rem;
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
     }
-    .bio {
-      color: #334155;
-      line-height: 1.6;
-      margin: 1.5rem 0;
+
+    .header .affiliation {
+      font-size: 1rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
     }
-    .links {
+
+    .contact-info {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
+
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .contact-info a:hover {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    /* Main layout */
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.2rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid #3b82f6;
+      display: inline-block;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+      color: #1e293b;
+    }
+
+    .interest-list {
+      list-style: none;
+    }
+
+    .interest-list li {
+      margin-bottom: 0.6rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .interest-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+    }
+
+    /* Main column */
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .bio {
+      line-height: 1.7;
+    }
+
+    .bio p {
+      margin-bottom: 0.8rem;
+    }
+
+    /* Publications */
+    .publication-list {
+      list-style: none;
+    }
+
+    .publication-list li {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .publication-list .title {
+      font-weight: 600;
+    }
+
+    .publication-list .venue {
+      font-style: italic;
+      color: #475569;
+    }
+
+    .pub-year {
+      font-weight: 500;
+      color: #3b82f6;
+      margin-right: 0.5rem;
+    }
+
+    .compact-list {
+      list-style: none;
+    }
+
+    .compact-list li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
     .btn {
-      background: #1e2a3a;
+      display: inline-block;
+      background: #3b82f6;
       color: white;
-      padding: 0.7rem 1.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 2rem;
       text-decoration: none;
+      font-size: 0.85rem;
       font-weight: 500;
-      transition: background 0.2s, transform 0.1s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      margin-top: 0.5rem;
+      transition: background 0.2s;
     }
+
     .btn:hover {
-      background: #2c3e66;
-      transform: translateY(-2px);
+      background: #2563eb;
     }
-    .social {
-      margin-top: 2rem;
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-    }
-    .social a {
-      color: #4b5563;
-      font-size: 1.5rem;
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-    .social a:hover {
-      color: #1e2a3a;
-    }
+
     footer {
-      margin-top: 2.5rem;
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1.5rem;
+      color: #64748b;
       font-size: 0.8rem;
-      color: #6c757d;
+      border-top: 1px solid #e2e8f0;
     }
-    @media (max-width: 500px) {
-      .card { padding: 1.5rem; }
-      h1 { font-size: 1.8rem; }
+
+    @media (max-width: 800px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="avatar">
-      🚀
+<div class="container">
+  <div class="header">
+    <h1>Mostafa Haghir Chehreghani</h1>
+    <div class="title">Assistant Professor</div>
+    <div class="affiliation">Amirkabir University of Technology (Tehran Polytechnic)</div>
+    <div class="contact-info">
+      <a href="mailto:mostafa.chehreghani@gmail.com">📧 mostafa.chehreghani@gmail.com</a>
+      <a href="mailto:mostafa.chehreghani@aut.ac.ir">📧 mostafa.chehreghani@aut.ac.ir</a>
+      <a href="https://scholar.google.com/" target="_blank">🎓 Google Scholar</a>
+      <a href="https://github.com/mostafachehreghani" target="_blank">🐙 GitHub</a>
     </div>
-    <h1>Hello, I'm <span id="name">Your Name</span></h1>
-    <div class="tagline">Developer | Creator | Problem Solver</div>
-    <div class="bio">
-      Welcome to my little corner of the web!  
-      I'm passionate about building useful things, learning new tech,  
-      and sharing knowledge. This site is hosted on GitHub Pages.
-    </div>
-    <div class="links">
-      <a href="#" class="btn">📄 Resume</a>
-      <a href="#" class="btn">📧 Contact</a>
-    </div>
-    <div class="social">
-      <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
-      <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
-    </div>
-    <footer>
-      ✨ Built with HTML/CSS • Hosted on GitHub Pages
-    </footer>
   </div>
+
+  <div class="content">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="card">
+        <h2>Research Interests</h2>
+        <ul class="interest-list">
+          <li>Graph-based machine learning</li>
+          <li>Graph algorithms</li>
+          <li>Machine learning, deep learning and AI</li>
+          <li>Philosophy of artificial intelligence</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Teaching</h2>
+        <ul class="compact-list">
+          <li>Algorithms of Big Data Analytics (2020–2024)</li>
+          <li>Discrete Mathematics (2019–2023)</li>
+          <li>Linear Algebra (2019–2024)</li>
+          <li>Complex Networks Analysis (2019–2023)</li>
+          <li>Web Data (Telecom Paris, 2017–2018)</li>
+          <li>Big Data Mining (Telecom Paris, 2017–2018)</li>
+          <li>Machine Learning and Data Mining (Telecom Paris, 2017)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>PhD Students</h2>
+        <ul class="compact-list">
+          <li>Batool Lakzaei (co-supervisor)</li>
+          <li>Mohammad Amin Javaheri (co-supervisor)</li>
+          <li>Mohammad Amir Rezaei Gazik (supervisor)</li>
+          <li>Rozhin Naseri (supervisor)</li>
+          <li>MohammadHossein Houshmand (co-supervisor)</li>
+        </ul>
+        <h3>Master Students</h3>
+        <ul class="compact-list">
+          <li>Parisa Tinaye Tehrani, Helia Ghorbani-Asl, Amin Motavasseli</li>
+          <li>Mohammad Pourbakht, Zahra Akhlaghi, Mohammad Naeimi</li>
+          <li>Narges Nemati Shamsabad, AmirHossein Kashani, Yasin Mohamadi</li>
+          <li>Nemat Gholinejad, Mohammad Moradi, Fateme Gholamzade Nasrabadi</li>
+          <li>and many more...</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Professional Activities</h2>
+        <ul class="compact-list">
+          <li><strong>Invited Speaker:</strong> 2nd Joint AUT-CNRS Big Data Workshop</li>
+          <li><strong>Track Chair:</strong> ICEE 2023, ICEE 2024</li>
+          <li><strong>PC Member:</strong> IJCAI 2019, PAKDD 2018, IJCAI 2017, DSAA 2017</li>
+          <li><strong>Reviewer for:</strong> TKDE, KBS, IPM, Nature Scientific Reports, Machine Learning, DMKD, Neurocomputing, and many more.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+      <div class="card bio">
+        <h2>Short Bio</h2>
+        <p>Mostafa Haghir Chehreghani received his Master's degree in Computer Engineering (Software) in 2007 from the University of Tehran, Iran. From 2007 to 2010, he worked as a programmer in Iran. He then pursued his PhD studies with the Machine Learning Group at KU Leuven. After completing his doctorate, he joined Institut Polytechnique de Paris as a researcher. Since February 2019, he has been an assistant professor at Amirkabir University of Technology (Tehran Polytechnic).</p>
+      </div>
+
+      <div class="card">
+        <h2>Selected Publications</h2>
+        <ul class="publication-list">
+          <li><span class="pub-year">2026</span> <span class="title">Heterophily-aware fair recommendation using graph convolutional networks</span><br>Nemat Gholinejad, Mostafa Haghir Chehreghani. <span class="venue">Neurocomputing</span>, 661, 131956.</li>
+          <li><span class="pub-year">2025</span> <span class="title">A Decision-Based Heterogenous Graph Attention Network for Multi-Class Fake News Detection</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Knowledge-Based Systems</span>, 330, 114499.</li>
+          <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Squashing in Graph Few-Shot Learning by Leveraging Local and Global Similarities</span><br>Yassin Mohamadi, Mostafa Haghir Chehreghani. <span class="venue">Applied Soft Computing</span>, 184, 113863.</li>
+          <li><span class="pub-year">2024</span> <span class="title">A review on the impact of data representation on model explainability</span><br>Mostafa Haghir Chehreghani. <span class="venue">ACM Computing Surveys</span>, 56(10).</li>
+          <li><span class="pub-year">2024</span> <span class="title">Hierarchical correlation clustering and tree preserving embedding</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">CVPR 2024</span>, pp. 23083-23093.</li>
+          <li><span class="pub-year">2024</span> <span class="title">The embeddings world and Artificial General Intelligence</span><br>Mostafa Haghir Chehreghani. <span class="venue">Cognitive Systems Research</span>, 84, 101201.</li>
+          <li><span class="pub-year">2022</span> <span class="title">Half a decade of graph convolutional networks</span><br>Mostafa Haghir Chehreghani. <span class="venue">Nature Machine Intelligence</span>, 4(3), pp. 192-193.</li>
+          <li><span class="pub-year">2021</span> <span class="title">Dynamical algorithms for data mining and machine learning over dynamic graphs</span><br>Mostafa Haghir Chehreghani. <span class="venue">WIRES DMKD</span>, 11(2).</li>
+          <li><span class="pub-year">2020</span> <span class="title">Learning representations from dendrograms</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">Machine Learning</span>, 109(9-10), pp. 1779-1802.</li>
+          <li><span class="pub-year">2019</span> <span class="title">Adaptive Algorithms for Estimating Betweenness and k-path Centralities</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">CIKM 2019</span>, pp. 1231-1240.</li>
+        </ul>
+        <a href="#" class="btn">📄 Full publication list (PDF)</a>
+      </div>
+
+      <div class="card">
+        <h2>Professional Service Highlights</h2>
+        <div class="two-columns">
+          <div>
+            <h3>Journal Reviewer</h3>
+            <ul class="compact-list">
+              <li>IEEE TKDE</li>
+              <li>Knowledge-Based Systems</li>
+              <li>Neurocomputing</li>
+              <li>Machine Learning (MLJ)</li>
+              <li>DMKD</li>
+              <li>The Computer Journal</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Conference Reviewer</h3>
+            <ul class="compact-list">
+              <li>KDD 2017, 2018</li>
+              <li>ICDM 2010–2014</li>
+              <li>ECML/PKDD 2011–2012</li>
+              <li>CIKM 2013</li>
+              <li>IJCAI 2017, 2019</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Mostafa Haghir Chehreghani | Last updated April 2026 | Hosted on GitHub Pages
+  </footer>
+</div>
 </body>
 </html>
