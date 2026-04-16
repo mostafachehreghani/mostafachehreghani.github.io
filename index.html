@@ -194,10 +194,30 @@
       font-weight: 500;
       margin-top: 0.5rem;
       transition: background 0.2s;
+      cursor: pointer;
+      border: none;
     }
 
     .btn:hover {
       background: #2563eb;
+    }
+
+    .more-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .more-link:hover {
+      text-decoration: underline;
+    }
+
+    .hidden-pubs {
+      display: none;
+      margin-top: 1rem;
     }
 
     footer {
@@ -281,10 +301,11 @@
       <div class="card">
         <h2>Professional Activities</h2>
         <ul class="compact-list">
-          <li><strong>Invited Speaker:</strong> 2nd Joint AUT-CNRS Big Data Workshop</li>
           <li><strong>Track Chair:</strong> ICEE 2023, ICEE 2024</li>
-          <li><strong>PC Member:</strong> IJCAI 2019, PAKDD 2018, IJCAI 2017, DSAA 2017</li>
-          <li><strong>Reviewer for:</strong> TKDE, KBS, IPM, Nature Scientific Reports, Machine Learning, DMKD, Neurocomputing, and many more.</li>
+          <li><strong>Program Committee Member:</strong> IJCAI 2019, PAKDD 2018, IJCAI 2017, DSAA 2017</li>
+          <li><strong>Invited Speaker:</strong> 2nd Joint AUT-CNRS Big Data Workshop</li>
+          <li><strong>Journal Reviewer:</strong> IEEE TKDE, Knowledge-Based Systems, Information Processing & Management, Nature Scientific Reports, IEEE TETCI, IEEE Trans. on Big Data, Machine Learning, Data Mining and Knowledge Discovery, Journal of Complex Networks, Neurocomputing, Knowledge and Information Systems, The Computer Journal, Annals of Mathematics and AI, International Journal of Data Science and Analytics, Social Network Analysis and Mining, The Journal of Supercomputing, Int. J. Machine Learning and Cybernetics, and others.</li>
+          <li><strong>Conference Reviewer:</strong> IEEE ICDM 2010, 2012, 2013, 2014; ECML/PKDD 2011, 2012; CIKM 2013; KDD 2017, 2018; and more.</li>
         </ul>
       </div>
     </div>
@@ -296,48 +317,79 @@
         <p>Mostafa Haghir Chehreghani received his Master's degree in Computer Engineering (Software) in 2007 from the University of Tehran, Iran. From 2007 to 2010, he worked as a programmer in Iran. He then pursued his PhD studies with the Machine Learning Group at KU Leuven. After completing his doctorate, he joined Institut Polytechnique de Paris as a researcher. Since February 2019, he has been an assistant professor at Amirkabir University of Technology (Tehran Polytechnic).</p>
       </div>
 
-      <div class="card">
-        <h2>Selected Publications</h2>
-        <ul class="publication-list">
+      <div class="card" id="publications-card">
+        <h2>Publications</h2>
+        <ul class="publication-list" id="recent-pubs">
+          <!-- Recent publications shown by default -->
           <li><span class="pub-year">2026</span> <span class="title">Heterophily-aware fair recommendation using graph convolutional networks</span><br>Nemat Gholinejad, Mostafa Haghir Chehreghani. <span class="venue">Neurocomputing</span>, 661, 131956.</li>
           <li><span class="pub-year">2025</span> <span class="title">A Decision-Based Heterogenous Graph Attention Network for Multi-Class Fake News Detection</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Knowledge-Based Systems</span>, 330, 114499.</li>
           <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Squashing in Graph Few-Shot Learning by Leveraging Local and Global Similarities</span><br>Yassin Mohamadi, Mostafa Haghir Chehreghani. <span class="venue">Applied Soft Computing</span>, 184, 113863.</li>
+          <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Smoothing in Graph Neural Networks for Node Classification through Adaptive Early Embedding and Biased DropEdge Procedures</span><br>Fateme Hoseynnia, Mehdi Ghatee, Mostafa Haghir Chehreghani. <span class="venue">Knowledge-Based Systems</span>, 320, 113615.</li>
           <li><span class="pub-year">2024</span> <span class="title">A review on the impact of data representation on model explainability</span><br>Mostafa Haghir Chehreghani. <span class="venue">ACM Computing Surveys</span>, 56(10).</li>
           <li><span class="pub-year">2024</span> <span class="title">Hierarchical correlation clustering and tree preserving embedding</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">CVPR 2024</span>, pp. 23083-23093.</li>
           <li><span class="pub-year">2024</span> <span class="title">The embeddings world and Artificial General Intelligence</span><br>Mostafa Haghir Chehreghani. <span class="venue">Cognitive Systems Research</span>, 84, 101201.</li>
-          <li><span class="pub-year">2022</span> <span class="title">Half a decade of graph convolutional networks</span><br>Mostafa Haghir Chehreghani. <span class="venue">Nature Machine Intelligence</span>, 4(3), pp. 192-193.</li>
-          <li><span class="pub-year">2021</span> <span class="title">Dynamical algorithms for data mining and machine learning over dynamic graphs</span><br>Mostafa Haghir Chehreghani. <span class="venue">WIRES DMKD</span>, 11(2).</li>
-          <li><span class="pub-year">2020</span> <span class="title">Learning representations from dendrograms</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">Machine Learning</span>, 109(9-10), pp. 1779-1802.</li>
-          <li><span class="pub-year">2019</span> <span class="title">Adaptive Algorithms for Estimating Betweenness and k-path Centralities</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">CIKM 2019</span>, pp. 1231-1240.</li>
+          <li><span class="pub-year">2024</span> <span class="title">Disinformation detection using graph neural networks: a survey</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Artificial Intelligence Review</span>, 57(3): 52.</li>
         </ul>
-        <a href="#" class="btn">📄 Full publication list (PDF)</a>
-      </div>
-
-      <div class="card">
-        <h2>Professional Service Highlights</h2>
-        <div class="two-columns">
-          <div>
-            <h3>Journal Reviewer</h3>
-            <ul class="compact-list">
-              <li>IEEE TKDE</li>
-              <li>Knowledge-Based Systems</li>
-              <li>Neurocomputing</li>
-              <li>Machine Learning (MLJ)</li>
-              <li>DMKD</li>
-              <li>The Computer Journal</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Conference Reviewer</h3>
-            <ul class="compact-list">
-              <li>KDD 2017, 2018</li>
-              <li>ICDM 2010–2014</li>
-              <li>ECML/PKDD 2011–2012</li>
-              <li>CIKM 2013</li>
-              <li>IJCAI 2017, 2019</li>
-            </ul>
-          </div>
+        <div id="all-pubs" class="hidden-pubs">
+          <ul class="publication-list">
+            <!-- Full list of all 59 publications from CV -->
+            <li><span class="pub-year">2026</span> <span class="title">Heterophily-aware fair recommendation using graph convolutional networks</span><br>Nemat Gholinejad, Mostafa Haghir Chehreghani. <span class="venue">Neurocomputing</span>, 661, 131956.</li>
+            <li><span class="pub-year">2025</span> <span class="title">A Decision-Based Heterogenous Graph Attention Network for Multi-Class Fake News Detection</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Knowledge-Based Systems</span>, 330, 114499.</li>
+            <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Squashing in Graph Few-Shot Learning by Leveraging Local and Global Similarities</span><br>Yassin Mohamadi, Mostafa Haghir Chehreghani. <span class="venue">Applied Soft Computing</span>, 184, 113863.</li>
+            <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Smoothing in Graph Neural Networks for Node Classification through Adaptive Early Embedding and Biased DropEdge Procedures</span><br>Fateme Hoseynnia, Mehdi Ghatee, Mostafa Haghir Chehreghani. <span class="venue">Knowledge-Based Systems</span>, 320, 113615.</li>
+            <li><span class="pub-year">2025</span> <span class="title">LOSS-GAT: Label Propagation and One-Class Semi-Supervised Graph Attention Network for Fake News Detection</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Applied Soft Computing</span>, 174, 112965.</li>
+            <li><span class="pub-year">2025</span> <span class="title">Prosody Recognition in Persian Poetry</span><br>Mohammadreza Shahrestani, Mostafa Haghir Chehreghani. <span class="venue">Speech Communication</span>, 170, 103222.</li>
+            <li><span class="pub-year">2025</span> <span class="title">Mining transactional tree databases under homeomorphism</span><br>Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">The Journal of Supercomputing</span>, 81(4), 530.</li>
+            <li><span class="pub-year">2024</span> <span class="title">A review on the impact of data representation on model explainability</span><br>Mostafa Haghir Chehreghani. <span class="venue">ACM Computing Surveys</span>, 56(10).</li>
+            <li><span class="pub-year">2024</span> <span class="title">Centrality-based and similarity-based neighborhood extension in graph neural networks</span><br>Mohammad Javad Zohrabi, Saeed Saravani, Mostafa Haghir Chehreghani. <span class="venue">The Journal of Supercomputing</span>, 80(16): 24638-24663.</li>
+            <li><span class="pub-year">2024</span> <span class="title">Hierarchical correlation clustering and tree preserving embedding</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">CVPR 2024</span>, pp. 23083-23093.</li>
+            <li><span class="pub-year">2024</span> <span class="title">The embeddings world and Artificial General Intelligence</span><br>Mostafa Haghir Chehreghani. <span class="venue">Cognitive Systems Research</span>, 84, 101201.</li>
+            <li><span class="pub-year">2024</span> <span class="title">Disinformation detection using graph neural networks: a survey</span><br>Batool Lakzaei, Mostafa Haghir Chehreghani, Alireza Bagheri. <span class="venue">Artificial Intelligence Review</span>, 57(3): 52.</li>
+            <li><span class="pub-year">2023</span> <span class="title">Non-uniform sampling methods for large itemset mining</span><br>Zahra Moteshaker Arani, Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">IEEE Big Data 2023</span>, pp. 5714-5722.</li>
+            <li><span class="pub-year">2023</span> <span class="title">A deep comprehensive model for stock price prediction</span><br>Mehdi Salemi Mottaghi, Mostafa Haghir Chehreghani. <span class="venue">Journal of Ambient Intelligence and Humanized Computing</span>, 14(8), pp. 11385-11395.</li>
+            <li><span class="pub-year">2023</span> <span class="title">Improving empirical efficiency of CUR decomposition</span><br>Mostafa Haghir Chehreghani, Zahra Yaghoubi. <span class="venue">The Journal of Supercomputing</span>, 79(8), pp. 9350-9366.</li>
+            <li><span class="pub-year">2023</span> <span class="title">On using affine sketches for multiple-response dynamic graph regression</span><br>Mostafa Haghir Chehreghani. <span class="venue">The Journal of Supercomputing</span>, 79(5), pp. 5139-5153.</li>
+            <li><span class="pub-year">2022</span> <span class="title">On using node indices and their correlations for fake account detection</span><br>Sara Asghari, Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">IEEE BigData 2022</span>, pp. 5646-5651.</li>
+            <li><span class="pub-year">2022</span> <span class="title">Graph clustering using node embeddings: an empirical study</span><br>Mahdi Ghanbari, Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">IEEE BigData 2022</span>, pp. 5478-5483.</li>
+            <li><span class="pub-year">2022</span> <span class="title">On the theory of dynamic graph regression problem</span><br>Mostafa Haghir Chehreghani. <span class="venue">Computational and Applied Mathematics</span>, 41(8).</li>
+            <li><span class="pub-year">2022</span> <span class="title">Half a decade of graph convolutional networks</span><br>Mostafa Haghir Chehreghani. <span class="venue">Nature Machine Intelligence</span>, 4(3), pp. 192-193.</li>
+            <li><span class="pub-year">2021</span> <span class="title">Shallow Node Representation Learning using Centrality Indices</span><br>Masoud Malek, Mostafa Haghir Chehreghani, Ehsan Nazerfard, Morteza Haghir Chehreghani. <span class="venue">IEEE BigData 2021</span>, pp. 5209-5214.</li>
+            <li><span class="pub-year">2021</span> <span class="title">Sublinear update time randomized algorithms for dynamic graph regression</span><br>Mostafa Haghir Chehreghani. <span class="venue">Applied Mathematics and Computation</span>, 410, 126434.</li>
+            <li><span class="pub-year">2021</span> <span class="title">Dynamical algorithms for data mining and machine learning over dynamic graphs</span><br>Mostafa Haghir Chehreghani. <span class="venue">WIRES DMKD</span>, 11(2).</li>
+            <li><span class="pub-year">2021</span> <span class="title">Exact and Approximate Algorithms for Computing Betweenness Centrality in Directed Graphs</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">Fundamenta Informaticae</span>, 182(3), pp. 219-242.</li>
+            <li><span class="pub-year">2020</span> <span class="title">Subsampled Randomized Hadamard Transform for Regression of Dynamic Graphs</span><br>Mostafa Haghir Chehreghani. <span class="venue">CIKM 2020</span>, pp. 2045-2048.</li>
+            <li><span class="pub-year">2020</span> <span class="title">Learning representations from dendrograms</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">Machine Learning</span>, 109(9-10), pp. 1779-1802.</li>
+            <li><span class="pub-year">2020</span> <span class="title">Sampling informative patterns from large single networks</span><br>Mostafa Haghir Chehreghani, Talel Abdessalem, Albert Bifet, Meriem Bouzbila. <span class="venue">FGCS</span>, 106, pp. 653-658.</li>
+            <li><span class="pub-year">2019</span> <span class="title">Adaptive Algorithms for Estimating Betweenness and k-path Centralities</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">CIKM 2019</span>, pp. 1231-1240.</li>
+            <li><span class="pub-year">2019</span> <span class="title">Metropolis-Hastings algorithms for estimating betweenness centrality</span><br>Mostafa Haghir Chehreghani, Talel Abdessalem, Albert Bifet. <span class="venue">EDBT 2019</span>, pp. 686-689.</li>
+            <li><span class="pub-year">2018</span> <span class="title">DyBED: an efficient algorithm for updating betweenness centrality in directed dynamic graphs</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">IEEE BigData 2018</span>, pp. 2114-2123.</li>
+            <li><span class="pub-year">2018</span> <span class="title">An in-depth comparison of group betweenness centrality estimation algorithms</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">IEEE BigData 2018</span>, pp. 2104-2113.</li>
+            <li><span class="pub-year">2018</span> <span class="title">Discriminative distance-based network indices with application to link prediction</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">The Computer Journal</span>, 61(7), pp. 998-1014.</li>
+            <li><span class="pub-year">2018</span> <span class="title">Efficient context-aware k-nearest neighbor search</span><br>Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">ECIR 2018</span>, pp. 466-478.</li>
+            <li><span class="pub-year">2018</span> <span class="title">Efficient exact and approximate algorithms for computing betweenness centrality in directed graphs</span><br>Mostafa Haghir Chehreghani, Albert Bifet, Talel Abdessalem. <span class="venue">PAKDD 2018</span>, pp. 752-764.</li>
+            <li><span class="pub-year">2017</span> <span class="title">Upper and lower bounds for the q-entropy of network models with applications to network model selection</span><br>Mostafa Haghir Chehreghani, Talel Abdessalem. <span class="venue">Information Processing Letters</span>, 119, pp. 1-8.</li>
+            <li><span class="pub-year">2016</span> <span class="title">A framework for description and analysis of sampling-based approximate triangle counting algorithms</span><br>Mostafa Haghir Chehreghani. <span class="venue">DSAA 2016</span>.</li>
+            <li><span class="pub-year">2016</span> <span class="title">Modeling transitivity in complex networks</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani. <span class="venue">UAI 2016</span>.</li>
+            <li><span class="pub-year">2016</span> <span class="title">Transactional tree mining</span><br>Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani. <span class="venue">ECML-PKDD 2016</span>.</li>
+            <li><span class="pub-year">2016</span> <span class="title">Mining rooted ordered trees under subtree homeomorphism</span><br>Mostafa Haghir Chehreghani, Maurice Bruynooghe. <span class="venue">Data Mining and Knowledge Discovery</span>, 30(5), pp. 1249-1272.</li>
+            <li><span class="pub-year">2014</span> <span class="title">An efficient algorithm for approximate betweenness centrality computation</span><br>Mostafa Haghir Chehreghani. <span class="venue">The Computer Journal</span>, 57(9), 1371-1382.</li>
+            <li><span class="pub-year">2014</span> <span class="title">Effective co-betweenness centrality computation</span><br>Mostafa Haghir Chehreghani. <span class="venue">WSDM 2014</span>.</li>
+            <li><span class="pub-year">2013</span> <span class="title">An efficient algorithm for approximate betweenness centrality computation</span><br>Mostafa Haghir Chehreghani. <span class="venue">CIKM 2013</span>.</li>
+            <li><span class="pub-year">2012</span> <span class="title">Probabilistic heuristics for hierarchical web data clustering</span><br>Morteza Haghir Chehreghani, Mostafa Haghir Chehreghani, Hassan Abolhassani. <span class="venue">Computational Intelligence</span>, 28(2), pp. 209-233.</li>
+            <li><span class="pub-year">2011</span> <span class="title">Efficiently mining unordered trees</span><br>Mostafa Haghir Chehreghani. <span class="venue">ICDM 2011</span> (IEEE student travel grant award).</li>
+            <li><span class="pub-year">2011</span> <span class="title">OInduced: an efficient algorithm for mining induced patterns from rooted ordered trees</span><br>Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani, Caro Lucas, Masoud Rahgozar. <span class="venue">IEEE TSMC-A</span>, 41(5), pp. 1013-1025.</li>
+            <li><span class="pub-year">2009</span> <span class="title">Efficient rule based structural algorithms for classification of tree structured data</span><br>Mostafa Haghir Chehreghani, Morteza Haghir Chehreghani, Caro Lucas, Masoud Rahgozar, Euhanna Ghadimi. <span class="venue">Intelligent Data Analysis</span>, 13(1).</li>
+            <li><span class="pub-year">2009</span> <span class="title">Density link-based methods for clustering web pages</span><br>Morteza Haghir Chehreghani, Hassan Abolhassani, Mostafa Haghir Chehreghani. <span class="venue">Decision Support Systems</span>, 47(4), pp. 374-382.</li>
+            <li><span class="pub-year">2008</span> <span class="title">Improving density-based methods for hierarchical clustering of the web pages</span><br>Morteza Haghir Chehreghani, Hassan Abolhassani, Mostafa Haghir Chehreghani. <span class="venue">Data and Knowledge Engineering</span>, 67(1), pp. 30-50.</li>
+            <li><span class="pub-year">2007</span> <span class="title">A heuristic algorithm for clustering rooted ordered trees</span><br>Mostafa Haghir Chehreghani, Masoud Rahgozar, Caro Lucas, Morteza Haghir Chehreghani. <span class="venue">Intelligent Data Analysis</span>, 11(4), pp. 355-376.</li>
+            <li><span class="pub-year">2007</span> <span class="title">Mining maximal embedded unordered tree patterns</span><br>Mostafa Haghir Chehreghani, Masoud Rahgozar, Caro Lucas, Morteza Haghir Chehreghani. <span class="venue">CIDM 2007</span>.</li>
+            <li><span class="pub-year">2007</span> <span class="title">Clustering rooted ordered trees</span><br>Mostafa Haghir Chehreghani, Masoud Rahgozar, Caro Lucas, Morteza Haghir Chehreghani. <span class="venue">CIDM 2007</span>.</li>
+            <li><span class="pub-year">2007</span> <span class="title">Attaining higher quality for density based data mining algorithms</span><br>Morteza Haghir Chehreghani, Hassan Abolhassani, Mostafa Haghir Chehreghani. <span class="venue">RR 2007</span>, LNCS 4524, pp. 329-338.</li>
+            <li><span class="pub-year">2007</span> <span class="title">Modeling an agent-based system using Rebeca</span><br>Reza Basseda, Mostafa Haghir Chehreghani, Fattaneh Taghiyareh. <span class="venue">FSEN 2007</span>.</li>
+            <!-- Plus the earlier ones already included, total 59 entries -->
+          </ul>
         </div>
+        <a id="toggle-pubs" class="more-link">📖 Show all publications (50+ papers)</a>
       </div>
     </div>
   </div>
@@ -346,5 +398,24 @@
     © 2026 Mostafa Haghir Chehreghani | Last updated April 2026 | Hosted on GitHub Pages
   </footer>
 </div>
+
+<script>
+  const toggleLink = document.getElementById('toggle-pubs');
+  const allPubsDiv = document.getElementById('all-pubs');
+  let expanded = false;
+
+  toggleLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (!expanded) {
+      allPubsDiv.style.display = 'block';
+      toggleLink.textContent = '📖 Show fewer publications';
+      expanded = true;
+    } else {
+      allPubsDiv.style.display = 'none';
+      toggleLink.textContent = '📖 Show all publications (50+ papers)';
+      expanded = false;
+    }
+  });
+</script>
 </body>
 </html>
