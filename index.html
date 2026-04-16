@@ -263,6 +263,13 @@
         height: 100px;
       }
     }
+    /* Remove bullet from the parent item of a nested list */
+  .compact-list li.no-bullet {
+    list-style: none;
+  }
+  .compact-list li.no-bullet::before {
+    content: none;
+  }
   </style>
 </head>
 <body>
