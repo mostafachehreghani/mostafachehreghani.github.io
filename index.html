@@ -135,7 +135,7 @@
       to { opacity: 1; }
     }
 
-    /* Cards (reusable) */
+    /* Cards */
     .card {
       background: white;
       border-radius: 1.2rem;
@@ -215,10 +215,11 @@
       margin-right: 0.5rem;
     }
 
+    /* Only underline, no bold/blue */
     .highlight {
-      font-weight: 700;
-      color: #2563eb;
       text-decoration: underline;
+      font-weight: normal;
+      color: inherit;
     }
 
     .more-link {
@@ -356,11 +357,11 @@
     </div>
   </div>
 
-  <!-- Tab 2: Publications -->
+  <!-- Tab 2: Publications (sorted by year, most recent first) -->
   <div id="tab2" class="tab-content">
     <div class="card">
       <h2>Publications</h2>
-      <!-- Recent publications (sorted by year descending) with highlighting and venue links -->
+      <!-- Recent publications (sorted by year descending) -->
       <ul class="publication-list" id="recent-pubs">
         <li><span class="pub-year">2026</span> <span class="title">Heterophily-aware fair recommendation using graph convolutional networks</span><br>Nemat Gholinejad, <span class="highlight">Mostafa Haghir Chehreghani</span>. <span class="venue"><a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank">Neurocomputing</a></span>, 661, 131956.</li>
         <li><span class="pub-year">2025</span> <span class="title">A Decision-Based Heterogenous Graph Attention Network for Multi-Class Fake News Detection</span><br>Batool Lakzaei, <span class="highlight">Mostafa Haghir Chehreghani</span>, Alireza Bagheri. <span class="venue"><a href="https://www.sciencedirect.com/journal/knowledge-based-systems" target="_blank">Knowledge-Based Systems</a></span>, 330, 114499.</li>
@@ -373,7 +374,7 @@
       </ul>
       <div id="all-pubs" class="hidden-pubs">
         <ul class="publication-list">
-          <!-- Full list of all publications with highlighting and venue links -->
+          <!-- Full list of publications (most recent first) with underline only -->
           <li><span class="pub-year">2026</span> <span class="title">Heterophily-aware fair recommendation using graph convolutional networks</span><br>Nemat Gholinejad, <span class="highlight">Mostafa Haghir Chehreghani</span>. <span class="venue"><a href="https://www.sciencedirect.com/journal/neurocomputing" target="_blank">Neurocomputing</a></span>, 661, 131956.</li>
           <li><span class="pub-year">2025</span> <span class="title">A Decision-Based Heterogenous Graph Attention Network for Multi-Class Fake News Detection</span><br>Batool Lakzaei, <span class="highlight">Mostafa Haghir Chehreghani</span>, Alireza Bagheri. <span class="venue"><a href="https://www.sciencedirect.com/journal/knowledge-based-systems" target="_blank">Knowledge-Based Systems</a></span>, 330, 114499.</li>
           <li><span class="pub-year">2025</span> <span class="title">Mitigating Over-Squashing in Graph Few-Shot Learning by Leveraging Local and Global Similarities</span><br>Yassin Mohamadi, <span class="highlight">Mostafa Haghir Chehreghani</span>. <span class="venue"><a href="https://www.sciencedirect.com/journal/applied-soft-computing" target="_blank">Applied Soft Computing</a></span>, 184, 113863.</li>
